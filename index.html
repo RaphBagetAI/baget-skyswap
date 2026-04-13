@@ -20,29 +20,30 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" role="banner">
       <div class="container hero-content">
         <h2 class="hero-title">Find Nearby Telescope-Sharing Meetups</h2>
         <p class="hero-description">Borrow access to telescopes, learn astronomy fast, and meet local enthusiasts in your neighborhood.</p>
         <div class="hero-cta">
-          <a href="#signup" class="btn-primary">Join a Meetup</a>
-          <a href="#host" class="btn-secondary">Become a Host</a>
+          <a href="#signup" class="btn-primary" aria-label="Join a telescope meetup">Join a Meetup</a>
+          <a href="#host" class="btn-secondary" aria-label="Become a telescope meetup host">Become a Host</a>
         </div>
+        <p class="trust-note">Trusted by local astronomy enthusiasts, families, and beginners.</p>
       </div>
     </section>
 
-    <section id="signup" class="signup-section">
+    <section id="signup" class="signup-section" aria-labelledby="signup-title">
       <div class="container">
-        <h3>Sign up to join a meetup</h3>
+        <h3 id="signup-title">Sign up to join a meetup</h3>
         <form id="attendee-form" class="form" aria-label="Attendee signup form">
           <label for="attendee-name">Name</label>
-          <input type="text" id="attendee-name" name="name" required />
+          <input type="text" id="attendee-name" name="name" required placeholder="Your full name" />
 
           <label for="attendee-email">Email</label>
-          <input type="email" id="attendee-email" name="email" required />
+          <input type="email" id="attendee-email" name="email" required placeholder="you@example.com" />
 
           <label for="attendee-city">City / Neighborhood</label>
-          <input type="text" id="attendee-city" name="city" required />
+          <input type="text" id="attendee-city" name="city" required placeholder="e.g. Brooklyn, NY" />
 
           <label for="attendee-experience">Experience Level</label>
           <select id="attendee-experience" name="experience" required>
@@ -63,20 +64,20 @@
           <input type="text" id="attendee-availability" name="availability" placeholder="e.g. Weekends, Weeknights" required />
 
           <button type="submit" class="btn-primary">Sign Up</button>
-          <p id="attendee-thankyou" class="thankyou-message hidden">Thank you! We'll be in touch soon.</p>
+          <p id="attendee-thankyou" class="thankyou-message hidden" role="alert">Thank you! We'll be in touch soon.</p>
         </form>
       </div>
     </section>
 
-    <section id="host" class="host-section">
+    <section id="host" class="host-section" aria-labelledby="host-title">
       <div class="container">
-        <h3>Host a telescope meetup</h3>
+        <h3 id="host-title">Host a telescope meetup</h3>
         <form id="host-form" class="form" aria-label="Host application form">
           <label for="host-name">Name</label>
-          <input type="text" id="host-name" name="name" required />
+          <input type="text" id="host-name" name="name" required placeholder="Your full name" />
 
           <label for="host-email">Email</label>
-          <input type="email" id="host-email" name="email" required />
+          <input type="email" id="host-email" name="email" required placeholder="you@example.com" />
 
           <label for="host-area">Area Served</label>
           <input type="text" id="host-area" name="area" placeholder="City, neighborhood, or region" required />
@@ -101,14 +102,14 @@
           </select>
 
           <button type="submit" class="btn-primary">Apply to Host</button>
-          <p id="host-thankyou" class="thankyou-message hidden">Thanks for applying! We will review and contact you soon.</p>
+          <p id="host-thankyou" class="thankyou-message hidden" role="alert">Thanks for applying! We will review and contact you soon.</p>
         </form>
       </div>
     </section>
 
-    <section id="about" class="about-section">
+    <section id="about" class="about-section" aria-labelledby="about-title">
       <div class="container">
-        <h3>About SkySwap</h3>
+        <h3 id="about-title">About SkySwap</h3>
         <p>SkySwap connects amateur astronomers with verified hosts who share their telescopes for local meetups. Whether you're a beginner, a family, or an experienced stargazer, find trusted nearby meetups to borrow telescope access, learn quickly, and enjoy the night sky together.</p>
       </div>
     </section>
