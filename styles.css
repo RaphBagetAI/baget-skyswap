@@ -1,0 +1,247 @@
+/* SkySwap landing page styles - Retro Analog direction adapted for SkySwap brand */
+
+:root {
+  /* Color Palette */
+  --color-bg: #F4ECD8; /* Warm cream background */
+  --color-primary: #6B2D3E; /* Deep burgundy for primary actions and headings */
+  --color-secondary: #2C3E50; /* Faded navy for text and secondary elements */
+  --color-text: #4A3728; /* Warm sepia text color for readability */
+  --color-text-muted: #7A6655; /* Muted warm sepia for less emphasis */
+  --color-border: #A78C74; /* light sepia border color */
+
+  /* Spacing and layout */
+  --radius: 4px;
+  --shadow-inset: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+}
+
+/* Global reset and base styling */
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  font-family: 'Lato', sans-serif;
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-lg) 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Libre Baskerville', serif;
+  margin: 0 0 var(--space-md) 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+}
+
+/* Header */
+.header {
+  background-color: var(--color-bg);
+  border-bottom: 2px solid var(--color-border);
+  padding: var(--space-md) 0;
+  box-shadow: var(--shadow-inset);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 28px;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  margin-left: var(--space-lg);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-primary);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #8b7c6f, #f4ecd8);
+  padding: var(--space-xl) 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-primary);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-lg);
+  color: var(--color-secondary);
+}
+
+.hero-cta a {
+  display: inline-block;
+  margin: 0 var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-inset);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #54002b;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* Form Sections */
+.signup-section, .host-section {
+  background: #fff;
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: var(--space-xl);
+  color: var(--color-secondary);
+}
+
+.form label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.form input[type="text"], .form input[type="email"], .form select {
+  width: 100%;
+  padding: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+
+.form button {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  font-weight: 700;
+  border-radius: var(--radius);
+  cursor: pointer;
+  width: 100%;
+  box-shadow: var(--shadow-inset);
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #54002b;
+}
+
+.thankyou-message {
+  margin-top: var(--space-md);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.hidden {
+  display: none;
+}
+
+/* About Section */
+.about-section {
+  text-align: center;
+  padding-bottom: var(--space-xl);
+  color: var(--color-secondary);
+}
+
+.about-section p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.125rem;
+}
+
+/* Responsive Layout */
+@media (min-width: 600px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1.375rem;
+  }
+
+  nav a {
+    margin-left: var(--space-xl);
+  }
+
+  .form button {
+    width: auto;
+    padding: var(--space-sm) var(--space-xl);
+  }
+}
